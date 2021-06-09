@@ -3,14 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { DxTextBoxModule,
+         DxSelectBoxModule,
+         DxTemplateModule,
+         DxButtonModule,
+         DxTextAreaModule } from 'devextreme-angular';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DxTextBoxModule,
+    DxSelectBoxModule,
+    DxTemplateModule,
+    DxButtonModule,
+    DxTextAreaModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
