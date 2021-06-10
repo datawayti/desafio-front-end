@@ -1,0 +1,68 @@
+<div class="container" id="formEstado">
+  <div class="row">
+    <div class="col-6">
+      <h3 class="text-center">Detalhe do Clima:</h3>
+      <img src="../assets/img/clima.png" style="width: 20%; margin-left: 15rem;">
+  </div>
+<div class="col-6" >
+  <h3 class="text-center">Procure Localização:</h3>
+  <div class="form-group">
+    <form class="d-flex">
+      <div class="dx-field">
+      <div class="dx-field-label">Municipio</div>
+      <div class="dx-field-value">
+        <dx-select-box
+        dataSource="https://servicodados.ibge.gov.br/api/v1/localidades/distritos"
+        valueExpr="municipio"
+        displayExpr="nome">
+          </dx-select-box>
+          </div>
+          </div>
+
+<!-- <div class="buscar">
+    <input type="search" name="value" class="inputSearch" placeholder="Digite o nome da cidade..." (change)="getValue($event)" >
+    <button (click)= mostraValor()></button>
+  </div>
+  -->
+
+      <dx-button class="btn btn-outline-success" onclick= "mostrarValor()" type="submit">Search</dx-button>
+    </form>
+  </div>
+</div>
+
+
+<div class="climashare">
+
+  <div class="left">
+      <h2 class="title">Tempo agora em</h2> 
+      <h2 class="city">{{cidade}}</h2>
+  </div>
+
+  <div class="row">
+      <div class="row2">
+          <p class="graus">{{temperatura}}º</p>
+      </div>
+  </div>
+  
+  <div class="column">
+      <div class="row2">
+          <h3>Estado</h3>
+          <p>{{estado}}</p>
+      </div>
+      
+      <!-- <div class="row2">
+          <h3></h3>
+          <p>919 hPa</p>
+      </div> -->
+
+      <div class="row2">
+          <h3>Municipio</h3>
+          <p>{{municipio}}</p>
+      </div>
+
+  </div>
+
+ 
+</div>
+
+

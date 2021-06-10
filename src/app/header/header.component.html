@@ -1,0 +1,17 @@
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="./home">ClimaTempoApp</a>
+      <a routerLink="./clima">Clima</a>
+      <a routerLink="./capital">Capital</a>
+      <dx-nav-bar>
+        <dxi-item text="Clima" icon="globe" [routerLink]=""></dxi-item> 
+        <!-- routerLink="./clima"> -->
+        <dxi-item text="Capitais" icon="map" [routerLink]=""></dxi-item>
+        <!-- routerLink="./capital"> -->
+        <dxi-item text="Find" icon="find"></dxi-item>
+    </dx-nav-bar>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
