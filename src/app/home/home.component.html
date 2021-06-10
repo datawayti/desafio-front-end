@@ -1,13 +1,15 @@
 
-<dx-text-box value=""></dx-text-box>
+<dx-text-box id="cidadeInput" value="" valueChangeEvent="keyup" (onValueChanged)="valueChanged($event)"></dx-text-box>
 
-<dx-select-box [items]="simpleProducts"></dx-select-box>
+<dx-select-box [dataSource]="estados" displayExpr="Sigla" valueExpr="ID" ></dx-select-box>
 
-<dx-button stylingMode="contained"
+<dx-button (click)="getClima()"
+stylingMode="contained"
 text="Contained"
 type="normal"
 [width]="120"
 ></dx-button>
+
 
 <dx-text-area
         [height]="90"

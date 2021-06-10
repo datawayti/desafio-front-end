@@ -10,11 +10,13 @@ import { DxTextBoxModule,
          DxButtonModule,
          DxTextAreaModule } from 'devextreme-angular';
 import { HttpClientModule } from '@angular/common/http';
+import { CapitaisComponent } from './capitais/capitais.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    CapitaisComponent
   ],
   imports: [
     BrowserModule,
