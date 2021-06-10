@@ -1,15 +1,36 @@
+<dx-toolbar [items]="toolbarContent">
+    
+</dx-toolbar>
+<dx-drawer [openedStateMode]="'shrink'"
+[position]="'left'"
+[revealMode]="'slide'"
+template="template"
+[(opened)]="isDrawerOpen"
+[height]="400"
+[closeOnOutsideClick]="false">
+    <div *dxTemplate="let data of 'template'" style="width: 200px">
+        <dx-list class="panel-list dx-theme-accent-as-background-color"
+            [dataSource]="navigation"
+            [hoverStateEnabled]="true"
+            [activeStateEnabled]="true"
+            [focusStateEnabled]="false"
+            routerLink="/capitais">
+        </dx-list>
+    </div>
+</dx-drawer>
 
-<dx-text-box id="cidadeInput" value="" valueChangeEvent="keyup" (onValueChanged)="valueChanged($event)"></dx-text-box>
+<!--<dx-text-box id="cidadeInput" value="" valueChangeEvent="keyup" (onValueChanged)="valueChanged($event)"></dx-text-box>-->
 
-<dx-select-box [dataSource]="estados" displayExpr="Sigla" valueExpr="ID" ></dx-select-box>
+<dx-select-box [dataSource]="estados" displayExpr="Sigla" valueExpr="Sigla" (onValueChanged)="optionChanged($event)"></dx-select-box>
+<dx-select-box [dataSource]="municipios" displayExpr="nome" valueExpr="nome" [disabled]="estadoNotSelected" (onValueChanged)="valueChanged($event)"></dx-select-box>
 
-<dx-button (click)="getClima()"
+<!--<dx-button (click)="getClima()"
 stylingMode="contained"
 text="Contained"
 type="normal"
 [width]="120"
-></dx-button>
-
+[disabled]="cidadeNotSelected"
+></dx-button>-->
 
 <dx-text-area id="textArea"
         [height]="90"

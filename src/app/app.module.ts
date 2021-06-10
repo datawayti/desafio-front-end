@@ -10,7 +10,10 @@ import { DxTextBoxModule,
          DxButtonModule,
          DxTextAreaModule,
          DxDataGridModule,
-         DxBulletModule } from 'devextreme-angular';
+         DxBulletModule,
+         DxDrawerModule,
+         DxToolbarModule,
+         DxListModule } from 'devextreme-angular';
 import { HttpClientModule } from '@angular/common/http';
 import { CapitaisComponent } from './capitais/capitais.component';
 
@@ -30,7 +33,10 @@ import { CapitaisComponent } from './capitais/capitais.component';
     DxTextAreaModule,
     HttpClientModule,
     DxDataGridModule,
-    DxBulletModule
+    DxBulletModule,
+    DxDrawerModule,
+    DxToolbarModule,
+    DxListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Cidade } from '../cidade';
 import { Estado } from '../estado';
-import { HomeService } from './home.service';
+import { HomeService, List } from './home.service';
 
 
 @Component({
@@ -15,7 +15,13 @@ export class HomeComponent implements OnInit {
   public cidades: Cidade[] = [];
   public estados: Estado[] = [];
   public climaDados: any;
+  public municipios: any;
   data: any;
+
+  public estadoNotSelected: boolean = true;
+  public cidadeNotSelected: boolean = true;
+
+  public estadoInput: string = "";
   public cidadeInput: string = "";
   public cidade: string = "";
   public temperatura: string = "";
@@ -23,9 +29,13 @@ export class HomeComponent implements OnInit {
   public ventoVelocidade: string = "";
   public climaOutput: string = "";
 
+  isDrawerOpen: Boolean = true;
+  navigation: List[] = []
+
 
 
   constructor(private homeService: HomeService) { 
+    this.navigation = homeService.getNavigationList();
   }
 
 
@@ -41,6 +51,7 @@ export class HomeComponent implements OnInit {
         console.log(this.cidades);
       }
     )
+    console.log(this.cidades.entries())
   }
 
   
@@ -55,11 +66,23 @@ export class HomeComponent implements OnInit {
     
   }
 
+  getMunicipioByEstado(): void {
+    this.homeService.getmunicipioByEstado(this.estadoInput).subscribe(
+      (response: any) => {
+        this.municipios = response;
+        console.log(this.municipios);
+      }
+    )
+  }
+
   getClima(): void {
-    this.homeService.getClima(this.cidadeInput).subscribe(
+    if (this.cidadeInput != "" && this.estadoInput != "") {
+    this.homeService.getClima(this.cidadeInput, this.estadoInput).subscribe(
       (response: any) => {
         this.climaDados = response;
         
+        console.log(this.cidadeInput)
+
         this.cidade = this.climaDados.results.city_name;
         this.temperatura = this.climaDados.results.temp;
         this.tempoAgora = this.climaDados.results.currently;
@@ -67,14 +90,33 @@ export class HomeComponent implements OnInit {
         this.climaOutput = ("Cidade: " + this.cidade + "\nTemperatura: " + this.temperatura + "\nTempo do dia: " + this.tempoAgora + "\nVelocidade do vento: " + this.ventoVelocidade);
       }
     )
+    }
 
   }
 
   valueChanged(input) {
     this.cidadeInput = input.value.replace(/\s/g, "").toLowerCase();
     console.log(this.cidadeInput);
+    this.cidadeNotSelected = false;
+    this.getClima();
 
   }
+
+  optionChanged(input) {
+    this.estadoInput = input.value;
+    console.log(input.value);
+    this.getMunicipioByEstado();
+    this.estadoNotSelected = false;
+  }
+
+  toolbarContent = [{
+    widget: 'dxButton',
+    location: 'before',
+    options: {
+        icon: 'menu',
+        onClick: () => this.isDrawerOpen = !this.isDrawerOpen,
+    }
+}];
 
   
   
