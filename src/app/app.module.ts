@@ -8,7 +8,9 @@ import { DxTextBoxModule,
          DxSelectBoxModule,
          DxTemplateModule,
          DxButtonModule,
-         DxTextAreaModule } from 'devextreme-angular';
+         DxTextAreaModule,
+         DxDataGridModule,
+         DxBulletModule } from 'devextreme-angular';
 import { HttpClientModule } from '@angular/common/http';
 import { CapitaisComponent } from './capitais/capitais.component';
 
@@ -26,7 +28,9 @@ import { CapitaisComponent } from './capitais/capitais.component';
     DxTemplateModule,
     DxButtonModule,
     DxTextAreaModule,
-    HttpClientModule
+    HttpClientModule,
+    DxDataGridModule,
+    DxBulletModule
   ],
   providers: [],
   bootstrap: [AppComponent]

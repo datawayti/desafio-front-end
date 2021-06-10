@@ -12,7 +12,7 @@ import { Estado } from '../estado';
 
     private cidadesUrl: string = '/assets/Cidades.json';
     private estadosUrl: string = '/assets/Estados.json';
-    private climaApiUrl: string = 'http://api.hgbrasil.com/weather?format=json-cors&key=cc5d3b47&city_name=';
+    private climaApiUrl: string = 'http://api.hgbrasil.com/weather?format=json-cors&key=1afaf54d&city_name=';
 
     constructor(private http: HttpClient) {}
 

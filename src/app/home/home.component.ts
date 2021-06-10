@@ -17,6 +17,11 @@ export class HomeComponent implements OnInit {
   public climaDados: any;
   data: any;
   public cidadeInput: string = "";
+  public cidade: string = "";
+  public temperatura: string = "";
+  public tempoAgora: string = "";
+  public ventoVelocidade: string = "";
+  public climaOutput: string = "";
 
 
 
@@ -54,11 +59,15 @@ export class HomeComponent implements OnInit {
     this.homeService.getClima(this.cidadeInput).subscribe(
       (response: any) => {
         this.climaDados = response;
-        console.log(this.climaDados.results.temp);
-        console.log(this.climaDados.results.currently);
-        console.log(this.climaDados.results.wind_speedy);
+        
+        this.cidade = this.climaDados.results.city_name;
+        this.temperatura = this.climaDados.results.temp;
+        this.tempoAgora = this.climaDados.results.currently;
+        this.ventoVelocidade = this.climaDados.results.wind_speedy;
+        this.climaOutput = ("Cidade: " + this.cidade + "\nTemperatura: " + this.temperatura + "\nTempo do dia: " + this.tempoAgora + "\nVelocidade do vento: " + this.ventoVelocidade);
       }
     )
+
   }
 
   valueChanged(input) {
