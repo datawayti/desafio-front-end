@@ -1,0 +1,113 @@
+<div class="m-3">
+  <dx-load-panel #loadPanel
+                 shadingColor="rgba(0,0,0,0.4)"
+                 [(visible)]="loadingVisible"
+                 [showIndicator]="true"
+                 [showPane]="true"
+                 [textContent]="'Carregando...'"
+                 [shading]="true"
+                 [closeOnOutsideClick]="false">
+  </dx-load-panel>
+
+
+
+  <div class="card mb-3">
+
+    <div class="card-body"
+         #cardRotate>
+      <div class="row">
+        <div class="col-sm-11">
+          <div class="card-title mb-3">
+            Filtro
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+
+        <div class="col-lg-6 col-sm-6 col-sm-12 mb-3 ">
+
+          <label class="mb-1"
+                 for="select-state">Estados</label>
+          <dx-select-box id="select-state"
+                         [items]="states"
+                         [searchTimeout]="100"
+                         [searchMode]="'contains'"
+                         [placeholder]="'Digite o nome do estado'"
+                         [searchExpr]="'Nome'"
+                         [searchEnabled]="true"
+                         [minSearchLength]="0"
+                         [showDataBeforeSearch]="true"
+                         [noDataText]="'Sem Dados'"
+                         (onSelectionChanged)="getCitiesByState($event.selectedItem)"
+                         displayExpr="Nome"
+                         valueExpr="Nome">
+
+          </dx-select-box>
+        </div>
+
+        <div class="col-lg-6 col-sm-6 col-sm-12 mb-3 "
+             *ngIf="cities && cities.length > 0">
+
+          <label class="mb-1"
+                 for="select-city">Cidades</label>
+          <dx-select-box id="select-city"
+                         [dataSource]="cities"
+                         displayExpr="name"
+                         valueExpr="name"
+                         [placeholder]="'Digite o nome da cidade'"
+                         (onSelectionChanged)="getWeather($event.selectedItem)"
+                         [searchTimeout]="100"
+                         [noDataText]="'Sem Dados'"
+                         [searchMode]="'contains'"
+                         [searchExpr]="'name'"
+                         [minSearchLength]="1"
+                         [showDataBeforeSearch]="false"
+                         [searchEnabled]="true"></dx-select-box>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <dx-data-grid id="gridContainer"
+                [noDataText]="'Sem Dados'"
+                [dataSource]="weathers"
+                [showBorders]="true">
+
+    <dxi-column caption="Icone"
+                cellTemplate="iconTemplate"></dxi-column>
+
+    <dxi-column dataField="temperature"
+                caption="Temperatura (°C)"
+                dataType="number"></dxi-column>
+
+    <dxi-column dataField="wind_direction"
+                caption="Direção do vento"></dxi-column>
+
+    <dxi-column dataField="wind_velocity"
+                caption="Velocidade do vento (km/h)"
+                dataType="number"></dxi-column>
+
+    <dxi-column dataField="humidity"
+                caption="Umidade (%)"
+                dataType="number"></dxi-column>
+
+    <dxi-column dataField="condition"
+                caption="Condição"></dxi-column>
+
+    <dxi-column dataField="pressure (hPa)"
+                caption="Pressão"
+                dataType="number"></dxi-column>
+
+    <dxi-column dataField="sensation"
+                caption="Sensação (°C)"></dxi-column>
+
+    <dxi-column dataField="date"
+                caption="Data"></dxi-column>
+
+    <div *dxTemplate="let i of 'iconTemplate'">
+      <img src="../../assets/icons/realistic/{{i.key.icon}}.png" />
+    </div>
+
+  </dx-data-grid>
+
+</div>

@@ -1,0 +1,16 @@
+<!-- <dx-toolbar [items]="toolbarContent">
+</dx-toolbar> -->
+
+<dx-tab-panel id="tabpanel"
+              [items]="tabs"
+              [animationEnabled]="true"
+              itemTitleTemplate="tabs"
+              (onSelectionChanged)="tabSelect($event)"
+              itemTemplate="city-template">
+  <div *dxTemplate="let tab of 'tabs'">
+    <span class="tab-panel-title">{{tab.title}}</span>
+  </div>
+  <div *dxTemplate="let city of 'city-template'">
+    <router-outlet></router-outlet>
+  </div>
+</dx-tab-panel>
