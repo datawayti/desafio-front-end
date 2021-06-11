@@ -1,0 +1,13 @@
+<div class="list-container">
+  <dx-list
+      [dataSource]="cidades"
+      [height]="400"
+      [searchEnabled]="true"
+      searchValue=""
+      searchExpr="name"
+      searchMode="contains">
+      <div (click)="selecionarCidade(cidades.id)" *dxTemplate="let cidades of 'item'">
+              <div>{{cidades.name}}</div>
+      </div>
+  </dx-list>
+</div>
