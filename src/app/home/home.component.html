@@ -1,6 +1,7 @@
+<!--Toolbar de navegação-->
 <dx-toolbar [items]="toolbarContent">
-    
 </dx-toolbar>
+<!--Drawer de navegação-->
 <dx-drawer [openedStateMode]="'shrink'"
 [position]="'left'"
 [revealMode]="'slide'"
@@ -21,6 +22,7 @@ template="template"
 
 <!--<dx-text-box id="cidadeInput" value="" valueChangeEvent="keyup" (onValueChanged)="valueChanged($event)"></dx-text-box>-->
 
+<!--Select Boxes para estados e municipios-->
 <dx-select-box [dataSource]="estados" displayExpr="Sigla" valueExpr="Sigla" (onValueChanged)="optionChanged($event)"></dx-select-box>
 <dx-select-box [dataSource]="municipios" displayExpr="nome" valueExpr="nome" [disabled]="estadoNotSelected" (onValueChanged)="valueChanged($event)"></dx-select-box>
 
@@ -32,8 +34,10 @@ type="normal"
 [disabled]="cidadeNotSelected"
 ></dx-button>-->
 
+<!--Text area onde os resultados serão exibidos-->
 <dx-text-area id="textArea"
         [height]="90"
+        [width]="500"
         [maxLength]="maxLength"
         [(value)]="climaOutput">
 </dx-text-area>

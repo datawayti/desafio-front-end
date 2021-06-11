@@ -1,5 +1,7 @@
+<!--Toolbar de navegação-->
 <dx-toolbar [items]="toolbarContent"> 
 </dx-toolbar>
+<!--Drawer de navegação-->
 <dx-drawer [openedStateMode]="'shrink'"
     [position]="'left'"
     [revealMode]="'slide'"
@@ -18,14 +20,18 @@
     </div>
 </dx-drawer>
 
+<!--Botão para fazer download do Data Grid em PDF-->
 <dx-button id="exportButton"
     icon="exportpdf"
     text="Export to PDF"
     (onClick)="exportGrid($event)">
 </dx-button>
 
+<!--Data Grid das capitais-->
 <dx-data-grid [showBorders]="true" dataSource="assets/Capitais.json">
+    <!--Configura a ordenação-->
     <dxo-sorting mode="multiple"></dxo-sorting>
+    <!--Configura quantos elementos aparecem por página-->
     <dxo-paging [pageSize]="10"></dxo-paging>
     <dxo-pager [visible]="true"
         [allowedPageSizes]="allowedPageSizes"
@@ -33,10 +39,11 @@
         [showPageSizeSelector]="true" 
         [showInfo]="true" 
         [showNavigationButtons]="true"></dxo-pager>
-        
+    <!--Adiciona uma fila para filtrar os elementos-->
     <dxo-filter-row [visible]="true"
         [applyFilter]="auto"></dxo-filter-row>
 
+    <!--Configura que tipo de dado cada coluna é composta-->
     <dxi-column dataField="Nome" caption="Capital">
     </dxi-column>
 
