@@ -5,14 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { DxButtonModule } from 'devextreme-angular';
+import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './template/navbar/navbar.component';
+import { TemplateModule } from './template/template.module';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DxButtonModule
+    DxButtonModule,
+    TemplateModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

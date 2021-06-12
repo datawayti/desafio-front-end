@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiURLBase: "https://servicodados.ibge.gov.br/api/",
+  token: '08924034b9ea0a706b9cff07f43b2856'
 };
 
 /*
