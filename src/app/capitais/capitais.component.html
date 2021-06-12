@@ -1,0 +1,32 @@
+<h2>Lista de Capitais</h2>
+
+<div class="d-flex justify-content-end gap-1 my-1">
+  <button class="btn btn-outline-danger" (click)="exportarPdf()">
+    Download em PDF
+  </button>
+</div>
+
+<dx-data-grid
+  (onExporting)="exportarExcel($event)"
+  [dataSource]="capitais"
+  [allowColumnReordering]="true"
+  [noDataText]="'Nenhum dado encontrado'"
+>
+  <dxi-column
+    [caption]="'Nome Estado'"
+    [dataField]="'nome'"
+    [allowSorting]="true"
+  ></dxi-column>
+  <dxi-column
+    [caption]="'Capital'"
+    [dataField]="'capital'"
+    [allowSorting]="true"
+  ></dxi-column>
+  <dxi-column
+    [caption]="'Previsão do Tempo'"
+    [dataField]="'clima'"
+  ></dxi-column>
+
+  <dxo-filter-row [visible]="true"></dxo-filter-row>
+  <dxo-export [enabled]="true"></dxo-export>
+</dx-data-grid>

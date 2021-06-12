@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrlIBGE: 'https://servicodados.ibge.gov.br/api/v1/localidades',
+  baseUrlClimaTempo: 'http://apiadvisor.climatempo.com.br/api/v1/',
+  tokenClimaTempo: '2d22ca8faa2f4291b10d39eceef1b0f8',
 };
 
 /*
