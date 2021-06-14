@@ -20,7 +20,7 @@ O layout fica a seu critério, o que conta são as funcionalidades.
 
 Funcionalidades:
 
-- Página inicial: Um campo para seleção do *Estado (UF)*, um campo para digitação do *Município*, um botão *Pesquisar* e um local onde irão aparecer as informações de previsão do tempo da cidade pesquisada.
+- Página inicial: Um campo para seleção do _Estado (UF)_, um campo para digitação do _Município_, um botão _Pesquisar_ e um local onde irão aparecer as informações de previsão do tempo da cidade pesquisada.
 - Capitais: Página onde devem estar relacionadas todas as capitais do Brasil, contendo algumas informações obtidas da API, à sua escolha.
 - Barra de navegação, para alternar entre a página inicial e a página de capitais.
 
@@ -34,7 +34,7 @@ Sinta-se livre para utilizar quaisquer informações que a API te proporcionar.
 4. Crie a página Capitais da sua aplicação Web, utilizando um `Data Grid` para relacionar as capitais. As informações (estado, município, previsão do tempo) devem ser exibidas em colunas no `Data Grid`.
 5. Crie a barra de navegação, utilizando um componente da suíte DevExtreme à sua escolha.
 6. Acrescente as funções de ordenação e filtro ao `Data Grid` da página Capitais.
-8. Acrescente ao `Data Grid` da página Capitais os recursos de paginação, exportação para Excel e exportação para PDF.
+7. Acrescente ao `Data Grid` da página Capitais os recursos de paginação, exportação para Excel e exportação para PDF.
 8. Modifique a página inicial, substituindo o `TextBox` da cidade por um `SelectBox`. Serão dois componentes `SelectBox`, um para o Estado e outro para o Município. O `SelectBox` dos municípios deve ser populado dinamicamente com base no estado selecionado. Para executar essa etapa você pode utilizar FakeAPI, MockAPI ou uma API real, como a do IBGE por exemplo (https://servicodados.ibge.gov.br/api/docs/localidades).
-9. Modifique a página inicial, removendo o `Button` *Pesquisar*. A consulta à API deve ocorrer automaticamente, sempre que for selecionado um município no `SelectBox`.
+9. Modifique a página inicial, removendo o `Button` _Pesquisar_. A consulta à API deve ocorrer automaticamente, sempre que for selecionado um município no `SelectBox`.
 10. Adicione um `Data Grid` à página inicial. Esse `Data Grid` deverá ser populado dinamicamente, com as informações dos municípios pesquisados, como um histórico.

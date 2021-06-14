@@ -1,0 +1,73 @@
+<h2>Página Inicial</h2>
+
+<div class="row">
+  <div class="col-md">
+    <div class="form-group">
+      <label for="estado">Estado</label>
+      <dx-select-box
+        class="form-control"
+        [id]="'estado'"
+        [dataSource]="estados"
+        [placeholder]="'Selecione o Estado'"
+        [noDataText]="'Nenhum estado para mostrar'"
+        [valueExpr]="'sigla'"
+        [displayExpr]="'nome'"
+        [(value)]="estadoSelecionado"
+        (onValueChanged)="carregarCidades($event.value)"
+      >
+      </dx-select-box>
+    </div>
+  </div>
+  <div class="col-md">
+    <div class="form-group">
+      <label for="cidade">Cidade</label>
+      <dx-select-box
+        class="form-control"
+        [id]="'cidade'"
+        [dataSource]="cidades"
+        [placeholder]="'Selecione a cidade'"
+        [noDataText]="'Nenhuma cidade para mostrar'"
+        [valueExpr]="'id'"
+        [displayExpr]="'nome'"
+        (onValueChanged)="carregarClimaCidade($event.value)"
+        [(value)]="cidadeSelecionada"
+      >
+      </dx-select-box>
+    </div>
+  </div>
+</div>
+
+<div class="my-3">
+  <dx-data-grid
+    [dataSource]="climas"
+    [noDataText]="'Sem busca de climas feitos'"
+    [allowColumnReordering]="true"
+  >
+    <dxi-column
+      [caption]="'Condição'"
+      [dataField]="'condition'"
+      [width]="'auto'"
+    ></dxi-column>
+    <dxi-column
+      [caption]="'Data'"
+      [dataField]="'date'"
+      dataType="date"
+    ></dxi-column>
+    <dxi-column [caption]="'Umidade'" [dataField]="'humidity'"> </dxi-column>
+    <dxi-column [caption]="'Icone'" [dataField]="'icon'"> </dxi-column>
+    <dxi-column [caption]="'Pressão'" [dataField]="'pressure'"></dxi-column>
+    <dxi-column [caption]="'Sensação'" [dataField]="'sensation'"></dxi-column>
+    <dxi-column
+      [caption]="'Temperatura'"
+      [dataField]="'temperature'"
+    ></dxi-column>
+    <dxi-column
+      [caption]="'Direção vento'"
+      [dataField]="'wind_direction'"
+    ></dxi-column>
+    <dxi-column
+      [caption]="'Velocidade Vento'"
+      [dataField]="'wind_velocity'"
+    ></dxi-column>
+  </dx-data-grid>
+</div>

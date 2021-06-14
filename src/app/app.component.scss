@@ -1,0 +1,20 @@
+@mixin flex($justify-value, $align-value) {
+  display: flex;
+  justify-content: $justify-value;
+  align-items: $align-value;
+}
+
+@mixin margin($v-margin, $h-margin) {
+  margin: $v-margin $h-margin;
+}
+
+@mixin width($width, $max-width) {
+  width: $width;
+  max-width: $max-width;
+}
+
+main {
+  @include margin(32px, auto);
+  @include width(100%, 1200px);
+  padding: 0 15px;
+}
