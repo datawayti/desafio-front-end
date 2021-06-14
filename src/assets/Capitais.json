@@ -1,0 +1,217 @@
+[{
+    "ID": "1",
+    "Nome": "Rio Branco",
+    "UF": "AC",
+    "Temperatura": "31°",
+    "Ciclo": "Dia",
+    "Vento": "15km/h" 
+},
+{
+    "ID": "2",
+    "Nome": "Maceió",
+    "UF": "AL",
+    "Temperatura": "29°",
+    "Ciclo": "Dia",
+    "Vento": "5km/h" 
+},
+{
+    "ID": "3",
+    "Nome": "Macapá",
+    "UF": "AP",
+    "Temperatura": "29°",
+    "Ciclo": "Dia",
+    "Vento": "7km/h" 
+},
+{
+    "ID": "4",
+    "Nome": "Manaus",
+    "UF": "AM",
+    "Temperatura": "35°",
+    "Ciclo": "Dia",
+    "Vento": "9km/h" 
+},
+{
+    "ID": "5",
+    "Nome": "Salvador",
+    "UF": "BA",
+    "Temperatura": "30°",
+    "Ciclo": "Dia",
+    "Vento": "9km/h" 
+},
+{
+    "ID": "6",
+    "Nome": "Fortaleza",
+    "UF": "CE",
+    "Temperatura": "34°",
+    "Ciclo": "Dia",
+    "Vento": "12km/h" 
+},
+{
+    "ID": "7",
+    "Nome": "Brasília",
+    "UF": "DF",
+    "Temperatura": "27°",
+    "Ciclo": "Dia",
+    "Vento": "3km/h" 
+},
+{
+    "ID": "8",
+    "Nome": "Vitória",
+    "UF": "ES",
+    "Temperatura": "26°",
+    "Ciclo": "Dia",
+    "Vento": "6km/h" 
+},
+{
+    "ID": "9",
+    "Nome": "Goiânia",
+    "UF": "GO",
+    "Temperatura": "30°",
+    "Ciclo": "Dia",
+    "Vento": "13km/h" 
+},
+{
+    "ID": "10",
+    "Nome": "São Luis",
+    "UF": "MA",
+    "Temperatura": "33°",
+    "Ciclo": "Dia",
+    "Vento": "10km/h" 
+},
+{
+    "ID": "11",
+    "Nome": "Cuiabá",
+    "UF": "MT",
+    "Temperatura": "25°",
+    "Ciclo": "Dia",
+    "Vento": "10km/h" 
+},
+{
+    "ID": "12",
+    "Nome": "Campo Grande",
+    "UF": "MS",
+    "Temperatura": "27°",
+    "Ciclo": "Dia",
+    "Vento": "13km/h" 
+},
+{
+    "ID": "13",
+    "Nome": "Belo Horizonte",
+    "UF": "MG",
+    "Temperatura": "23°",
+    "Ciclo": "Dia",
+    "Vento": "19km/h" 
+},
+{
+    "ID": "14",
+    "Nome": "Belém",
+    "UF": "PA",
+    "Temperatura": "31°",
+    "Ciclo": "Dia",
+    "Vento": "7km/h" 
+},
+{
+    "ID": "15",
+    "Nome": "João Pessoa",
+    "UF": "PB",
+    "Temperatura": "30°",
+    "Ciclo": "Dia",
+    "Vento": "8km/h" 
+},
+{
+    "ID": "16",
+    "Nome": "Curitiba",
+    "UF": "PR",
+    "Temperatura": "19°",
+    "Ciclo": "Dia",
+    "Vento": "4km/h" 
+},
+{
+    "ID": "17",
+    "Nome": "Recife",
+    "UF": "PE",
+    "Temperatura": "29°",
+    "Ciclo": "Dia",
+    "Vento": "7km/h" 
+},
+{
+    "ID": "18",
+    "Nome": "Teresina",
+    "UF": "PI",
+    "Temperatura": "30°",
+    "Ciclo": "Dia",
+    "Vento": "5km/h" 
+},
+{
+    "ID": "19",
+    "Nome": "Rio de Janeiro",
+    "UF": "RJ",
+    "Temperatura": "28°",
+    "Ciclo": "Dia",
+    "Vento": "15km/h" 
+},
+{
+    "ID": "20",
+    "Nome": "Natal",
+    "UF": "RN",
+    "Temperatura": "27°",
+    "Ciclo": "Dia",
+    "Vento": "14km/h" 
+},
+{
+    "ID": "21",
+    "Nome": "Porto Alegre",
+    "UF": "RS",
+    "Temperatura": "16°",
+    "Ciclo": "Dia",
+    "Vento": "8km/h" 
+},
+{
+    "ID": "22",
+    "Nome": "Porto Velho",
+    "UF": "RO",
+    "Temperatura": "30°",
+    "Ciclo": "Dia",
+    "Vento": "3km/h" 
+},
+{
+    "ID": "23",
+    "Nome": "Boa Vista",
+    "UF": "RR",
+    "Temperatura": "25°",
+    "Ciclo": "Dia",
+    "Vento": "7km/h" 
+},
+{
+    "ID": "24",
+    "Nome": "Florianópolis",
+    "UF": "SC",
+    "Temperatura": "17°",
+    "Ciclo": "Dia",
+    "Vento": "17km/h" 
+},
+{
+    "ID": "25",
+    "Nome": "São Paulo",
+    "UF": "SP",
+    "Temperatura": "20°",
+    "Ciclo": "Dia",
+    "Vento": "6km/h" 
+},
+{
+    "ID": "26",
+    "Nome": "Aracaju",
+    "UF": "SE",
+    "Temperatura": "28°",
+    "Ciclo": "Dia",
+    "Vento": "12km/h" 
+},
+{
+    "ID": "27",
+    "Nome": "Palmas",
+    "UF": "TO",
+    "Temperatura": "29°",
+    "Ciclo": "Dia",
+    "Vento": "10km/h" 
+}
+]
