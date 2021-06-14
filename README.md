@@ -14,7 +14,7 @@ Estaremos observando a qualidade do seu código, seu estilo, boas práticas, org
 
 ## O desafio
 
-Sua missão, caso decida aceitá-la, é criar uma aplicação Web que consuma a API do ClimaTempo (https://advisor.climatempo.com.br/).
+Sua missão, caso decida aceitá-la, é criar uma aplicação Web que consuma uma API de Previsão do Tempo. Você pode usar qualquer API de sua preferência.
 
 O layout fica a seu critério, o que conta são as funcionalidades.
 
