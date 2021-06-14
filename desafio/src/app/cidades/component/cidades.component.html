@@ -1,0 +1,37 @@
+<h1 class="mt-4">Cidades</h1>
+<ol class="breadcrumb mb-4">
+  <li class="breadcrumb-item active">Buscar</li>
+</ol>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <label for="inputEstado">UF: </label>
+      <select id="inputEstado" class="form-select" (change)="onChange($event.target)">
+        <option value="" selected disabled>Selecione...</option>
+        <option *ngFor="let estado of allEstados" [value]="estado.id">
+          {{ estado.sigla + " - " + estado.nome}}
+        </option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="inputCidade">Cidade: </label>
+      <select id="inputCidade" class="form-select" (change)="onChangeCidade($event.target)">
+        <option value="" selected disabled>Selecione...</option>
+        <option *ngFor="let municipio of allMunicipios" [value]="municipio.id">
+          {{ municipio.nome }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <br />
+  <div class="row" *ngIf="mostrar">
+    <h3>Data&Time: {{ clima?.results.date }} - {{ clima?.results.time }}</h3>
+    <h3>Temperatura: {{ clima?.results.temp }} </h3>
+    <h3>Condição Atual: {{ clima?.results.description }}</h3>
+    <h3>Umidade: {{ clima?.results.humidity }}</h3>
+    <h3>Velocidade do Vento: {{ clima?.results.wind_speedy }}</h3>
+    <h3>Nascer do Sol: {{ clima?.results.sunrise }}</h3>
+    <h3>Por do Sol: {{ clima?.results.sunset }}</h3>
+
+  </div>
+</div>

@@ -1,5 +1,6 @@
 export class Cidade {
   id?: number;
-  nome?: string;
-  estado?: string;
+  name?: string;
+  state?: string;
+  country?: string;
 }

@@ -9,13 +9,18 @@ import { Cidade } from '../model/Cidade';
 })
 export class CidadeService {
 
-  cidadesUrlJson: string = '/assets/Cidades.json'
+  urlTempo: string = environment.urlTempo;
+
 
   constructor(
     private http: HttpClient
   ) { }
 
-  getCidade(): Observable<Cidade> {
-    return this.http.get<Cidade>(this.cidadesUrlJson);
+  getIdDaCidade(nome: string, uf: string): Observable<Cidade> {
+    const httpParams = new HttpParams()
+      .set("format", "json-cors")
+      .set("key", "efb9dacc")
+      .set("city_name", nome)
+    return this.http.get<Cidade>(this.urlTempo + httpParams + ',' + uf);
   }
 }

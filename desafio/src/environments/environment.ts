@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiURLBase: "https://servicodados.ibge.gov.br/api/",
+  apiURLBaseIBGE: "https://servicodados.ibge.gov.br/api/v1/localidades/estados/",
+  urlTempo: 'https://api.hgbrasil.com/weather?',
   token: '08924034b9ea0a706b9cff07f43b2856'
 };
 

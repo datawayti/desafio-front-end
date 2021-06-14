@@ -10,6 +10,8 @@ import { NavbarComponent } from './template/navbar/navbar.component';
 import { TemplateModule } from './template/template.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CidadesModule } from './cidades/cidades.module';
+import { EstadosModule } from './estados/estados.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import { HttpClientModule } from '@angular/common/http';
     DxButtonModule,
     TemplateModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CidadesModule,
+    EstadosModule
   ],
   providers: [],
   bootstrap: [AppComponent]

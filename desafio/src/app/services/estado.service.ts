@@ -13,13 +13,12 @@ import { Municipios } from '../model/Municipios';
 })
 export class EstadoService {
 
-  urlComplemento: string = 'v1/localidades/estados/';
-  urlTodosEstados: string = environment.apiURLBase + this.urlComplemento;
-  urlEstado: string = environment.apiURLBase + this.urlComplemento;
-  urlDistrito: string = environment.apiURLBase + this.urlComplemento;
-  urlMesorregioes: string = environment.apiURLBase + this.urlComplemento;
-  urlMicrorregioes: string = environment.apiURLBase + this.urlComplemento;
-  urlMunicipios: string = environment.apiURLBase + this.urlComplemento;
+  urlTodosEstados: string = environment.apiURLBaseIBGE;
+  urlEstado: string = environment.apiURLBaseIBGE;
+  urlDistrito: string = environment.apiURLBaseIBGE;
+  urlMesorregioes: string = environment.apiURLBaseIBGE;
+  urlMicrorregioes: string = environment.apiURLBaseIBGE;
+  urlMunicipios: string = environment.apiURLBaseIBGE;
   httpParams = new HttpParams().set('orderBy', 'nome')
 
   constructor(
