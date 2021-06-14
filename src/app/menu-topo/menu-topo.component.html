@@ -1,0 +1,52 @@
+<dx-toolbar>
+  <dxi-item
+    location="before"
+    widget="dxButton"
+    [options]="buttonOptions"
+    location="before"
+  >
+
+  </dxi-item>
+
+  <dxi-item location="center" widget="dxButton" locateInMenu="never">
+    <div *dxTemplate>
+      <div class="toolbar-label"><b>CONSULTA DE CLIMA E TEMPO</b></div>
+    </div>
+  </dxi-item>
+
+  <dxi-item location="after">
+    <dx-select-box
+      #estado
+      [dataSource]="estados"
+      location="after"
+      widget="dxSelectBox"
+      locateInMenu="auto"
+      (onValueChanged)="escolherUF(estado.value)"
+    >
+    </dx-select-box>
+  </dxi-item>
+</dx-toolbar>
+
+<dx-drawer
+  [openedStateMode]="selectedOpenMode"
+  [position]="selectedPosition"
+  [revealMode]="selectedRevealMode"
+  template="template"
+  [(opened)]="isDrawerOpen"
+  [closeOnOutsideClick]="true"
+>
+  <div *dxTemplate="let data of 'template'" style="width: 200px" >
+    <dx-list
+      (onItemClick)="itemClick($event)"
+      class="panel-list dx-theme-accent-as-background-color"
+      [dataSource]="opcoesMenu"
+      [hoverStateEnabled]="false"
+      [activeStateEnabled]="false"
+      [focusStateEnabled]="false"
+    >
+
+    </dx-list>
+  </div>
+
+  <router-outlet></router-outlet>
+</dx-drawer>
