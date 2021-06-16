@@ -1,0 +1,61 @@
+<div class="m-3">
+
+  <dx-load-panel #loadPanel
+                 shadingColor="rgba(0,0,0,0.4)"
+                 [(visible)]="loadingVisible"
+                 [showIndicator]="true"
+                 [showPane]="true"
+                 [textContent]="'Carregando...'"
+                 [shading]="true"
+                 [closeOnOutsideClick]="false">
+  </dx-load-panel>
+
+
+  <div class="card mb-3">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-11">
+          <div class="card-title mb-3">
+            Capitais
+          </div>
+        </div>
+      </div>
+
+      <dx-button id="exportButton"
+                 icon="exportpdf"
+                 text="Export to PDF"
+                 (onClick)="exportToPDF()">
+      </dx-button>
+
+      <dx-data-grid id="gridContainer"
+                    [dataSource]="capitals"
+                    [showBorders]="true"
+                    [noDataText]="'Sem Dados'">
+
+
+        <dxo-filter-row [visible]="true"
+                        [applyFilter]="'auto'"></dxo-filter-row>
+        <dxi-column dataField="estadoId"
+                    caption="Estado"
+                    [allowSorting]="true"></dxi-column>
+
+        <dxi-column dataField="cidade"
+                    caption="Cidade"
+                    [allowSorting]="true"></dxi-column>
+
+        <dxi-column caption="Previsão do tempo"
+                    cellTemplate="forecastTemplate"></dxi-column>
+
+        <div *dxTemplate="let item of 'forecastTemplate'">
+          min: {{item.key.minTemperature}} °C - max: {{item.key.maxTemperature}} °C
+        </div>
+        <dxo-export [enabled]="true"
+                    [allowExportSelectedData]="false"></dxo-export>
+      </dx-data-grid>
+
+
+
+
+    </div>
+  </div>
+</div>

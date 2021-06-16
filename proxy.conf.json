@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target": "http://apiadvisor.climatempo.com.br",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}
